@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   # crud action routes
 
   # route to fetch and display all products
-  get "/products", to: "products#index"
+  get "/products", to: "product#index"
 
 # route to load form for creating new product
 get "/products/new", to: "products#new"
