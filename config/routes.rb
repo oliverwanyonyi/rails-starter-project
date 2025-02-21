@@ -11,4 +11,26 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+
+  # crud action routes
+
+  # route to fetch and display all products
+  get "/products", to: "products#index"
+
+# route to load form for creating new product
+get "/products/new", to: "products#new"
+
+# route to store product data
+post "/products", to: "products#create"
+
+# route for viewing single product
+get "/products/:id", to: "products#show"
+
+# route to load form for editing a particular product
+get "/products/:id/edit", to: "products#edit"
+# route to update a product
+patch "/products/:id", to: "products#update"
+put "/products/:id", to: "products#update"
+# route to delete product
+delete "/products/:id", to: "products#destroy"
 end
